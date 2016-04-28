@@ -1,3 +1,9 @@
+<FilesMatch "\.(js|json|html|css|jpg|png|gif)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
 <Files *.js>
 SetOuputFilter DEFLATE
 </Files>
